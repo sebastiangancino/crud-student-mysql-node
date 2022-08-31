@@ -1,15 +1,24 @@
-const express = require("express");
+const express = require("express")
 const app = express();
-
+const path =require("path")
 const port = 3004;
-const mysql = require("./connection").con;
+const mysql = require("./connection").con
 
 //configuration
-app.set("view engine", "hbs");
-app.set("views", "./view");
-app.use(express.static(__dirname + "/public"));
-/* app.use(express.urlencoded())
-app.use(express.json()) */
+app.set("view engine", "hbs")
+app.set("views", "./view")
+/* app.use(express.static(__dirname + "/public")) */
+ app.use(express.static(path.join(__dirname, 'public')))
+ app.use(express.urlencoded({extended: false}))
+app.use(express.json()) 
+
+
+ /**/
+
+ 
+
+
+
 
 //Routing
 

@@ -5,21 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="search.css">
 </head>
 <body>
+  <div class="menu">
+
+    <a href="/">
+      <div class="container-logo">
+            <img src="logouce.png" alt="" />  
+       </div>
+       </a>
+         <a href="/add">Agregar estudiante</a>
+         <a href="/search">Buscar estudiante</a>
+         <a href="/update">Actualizar estudiante</a>
+         <a href="/delete">Eliminar estudiante</a>
+         <a href="/view">Ver estudiante</a>
+     </div>
+
+
     <div class="container">
       <form action="/searchstudent" >
-   <h3>SEARCH STUDENT</h3>
+   <h3>BUSCAR ESTUDIANTE</h3>
    
-    <hr>
+  
  
-    <label for="cod_estu"><b>Code estu</b></label>
-    <input type="text" placeholder="type phone no to be searched" name="cod_estu" id="cod_estu" required>
+    <label for="cod_estu"><b>Código estudiante:  </b></label>
+    <input type="text" placeholder="Código estudiante" name="cod_estu" id="cod_estu" required>
 
-    <button type="submit" class="registerbtn">SEACRH STUDENT</button>
-    <a href="./" style="color:black">BACK TO HOME PAGE</a>
-
+    <button type="submit" class="registerbtn">BUSCAR</button>
+{{!--     <a href="./" style="color:black">BACK TO HOME PAGE</a>
+ --}}
     <br>
      {{#if mesg1}}
      <h3>Data Found!</h3>

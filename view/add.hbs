@@ -5,52 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="add.css">
 </head>
 <body>
-    <div class="container">
+
+
+  <div class="menu">
+
+    <a href="/">
+         <div class="container-logo">
+            <img src="logouce.png" alt="" />  
+       </div>
+   </a> 
+         <a href="/add">Agregar estudiante</a>
+         <a href="/search">Buscar estudiante</a>
+         <a href="/update">Actualizar estudiante</a>
+         <a href="/delete">Eliminar estudiante</a>
+         <a href="/view">Ver estudiantes</a>
+     </div>  
+
+
+    <div class="page-container">
+      <div class="add-container">
+        <div class="img-rigth">
+          <img src="inmersivo.png" alt="" srcset="">
+        </div>
        <form action="/addstudent"  >
-   <h3>ADD STUDENT</h3>
+   <h3>Agregar estudiante</h3>
    
     <hr>
 
-    <label for="cod_estu"><b>Código</b></label>
+    <div>
+    <div class="label-container"><label for="cod_estu"><b>Código</b></label></div>
     <input type="text" placeholder="Enter code" name="cod_estu" id="cod_estu" required>
-
-    <label for="cod_nac"><b>Nacionalidad</b></label>
+     </div>
+    
+    <div>
+     <div class="label-container"><label for="cod_nac"><b>Nacionalidad</b></label></div>
     <input type="text" placeholder="Enter Phone Number" name="cod_nac" id="cod_nac" required>
+    </div>
 
-    <label for="apellido_estu"><b>Apellidos</b></label>
+    <div>
+    <div class="label-container"><label for="apellido_estu"><b>Apellidos</b></label></div>
     <input type="text" placeholder="Enter Email Id" name="apellido_estu" id="apellido_estu" required>
-
-    <label for="nombre_estu"><b>Nombres</b></label>
+    </div>
+    
+    <div>
+    <div class="label-container"><label for="nombre_estu"><b>Nombres</b></label></div>
     <input type="text" placeholder="Enter name Id" name="nombre_estu" id="nombre_estu" required>
-    
-      <label for="telefono_estu"><b>Teléfono</b></label>
-    <input type="text" placeholder="Enter phone" name="telefono_estu" id="telefono_estu" required>
-    
-    <label for="correo_estu"><b>Correo</b></label>
-    <input type="text" placeholder="Enter phone" name="correo_estu" id="correo_estu" required>
-     
-     <label for="fecha_nac_estu"><b>Nacimiento</b></label>
-    <input type="text" placeholder="Enter fecha" name="fecha_nac_estu" id="fecha_nac_estu" required>
-     
-     <label for="ident_estu"><b>Identificación</b></label>
-    <input type="text" placeholder="Enter ident" name="ident_estu" id="ident_estu" required>
+    </div>
 
+    <div>
+    <div class="label-container"><label for="telefono_estu"><b>Teléfono</b></label></div>
+    <input type="text" placeholder="Enter phone" name="telefono_estu" id="telefono_estu" required>
+    </div>
+
+    <div>
+    <div class="label-container"><label for="correo_estu"><b>Correo</b></label></div>
+    <input type="text" placeholder="Enter phone" name="correo_estu" id="correo_estu" required>
+     </div>
+
+      <div>
+     <div class="label-container"><label for="fecha_nac_estu"><b>Nacimiento</b></label></div>
+    <input type="text" placeholder="Enter fecha" name="fecha_nac_estu" id="fecha_nac_estu" required>
+     </div>
+
+    <div>
+     <div class="label-container"><label for="ident_estu"><b>Identificación</b></label></div>
+    <input type="text" placeholder="Enter ident" name="ident_estu" id="ident_estu" required>
+    </div>
+
+    <div>
+    <div class="label-container">
     <label for="direccion_estu"><b>Dirección</b></label>
-    <input type="text" placeholder="Enter adreess" name="direccion_estu" id="direccion_estu" required>
-    
+     </div>
+     <input type="text" placeholder="Enter adreess" name="direccion_estu" id="direccion_estu" required>
+    </div>
    
  {{!--  <div class="gender_g">
      <strong>Gender</strong>
      <input type="radio" name="gender" id="" value="Male"> Male
      <input type="radio" name="gender" id=""  value="Female">  Female
   </div> --}}
-    <button type="submit" class="registerbtn">ADD STUDENT</button>
+    <button type="submit" class="registerbtn">AGREGAR</button>
 
   
-    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+
      
     {{#if mesg}}
      <h3>Data Inserted</h3>
@@ -63,5 +103,25 @@
      {{/if}} 
 </form>
 </div>
+</div>
+
+<footer>
+
+              <div class="textos-footer">
+              <h1>Grupo 3</h1>
+              <h5>Proyecto BD 5C</h5>
+              </div>
+
+              <div class="integrantes">
+                  <h3>Janeth Caiza</h3>
+                  <h3>Sebastián Gancino</h3>
+                  <h3>Oliver Guamán</h3>
+                  <h3>Sebastián Mafla</h3>
+              </div>
+
+              <div class="licen">
+              <h4>Msc. Yolanda Borja</h4>
+            </div>
+           </footer>
 </body>
 </html>

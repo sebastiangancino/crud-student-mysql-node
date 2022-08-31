@@ -5,31 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="update.css">
 </head>
 <body>
-    <div class="">
+
+  <div class="menu">
+      <div class="container-logo">
+            <img src="logouce.png" alt="" />  
+       </div>
+       
+        <a href="/add">Agregar estudiante</a>
+         <a href="/search">Buscar estudiante</a>
+         <a href="/update">Actualizar estudiante</a>
+         <a href="/delete">Eliminar estudiante</a>
+         <a href="/view">Ver estudiante</a>
+
+     </div>
+
+    <div class="info-container">
 
   <form action="/updatesearch">
-   <h3>SEARCH STUDENT</h3>
+   <h3>BUSCAR ESTUDIANTE</h3>
    
     <hr>
  
-    <label for="cod_estu"><b>Code no</b></label>
+    <label for="cod_estu"><b>Código estudiante</b></label>
     <input type="text" style="width:200px;" placeholder="type text to be searched" name="cod_estu" id="cod_estu" required>
 
-    <button type="submit" class="registerbtn">SEACRH STUDENT</button>
-    <a href="./" style="color:black">BACK TO HOME PAGE</a>
+    <button type="submit" class="registerbtn">BUSCAR</button>
 
     <br>
    
  {{#if umesg}}
-     <h3>Data updated!</h3>
+     <h3>DATOS ACTUALIZADOS!</h3>
      {{/if}}
 
      
      {{#if mesg2}}
-     <h3>Data Not Found!</h3>
+     <h3>DATOS NO ENCONTRADOS!</h3>
      {{/if}}
     </form>
   </div>
@@ -39,49 +52,84 @@
 {{#if mesg1}}
        <div class="container">
        <form action="/updatestudent"  >
-   <h3>UPDATE STUDENT</h3>
+   <h3>ACTUALIZAR ESTUDIANTE</h3>
    
     <hr>
 {{#data}}
 
+    <div>
      <label for="cod_estu"><b>Código</b></label>
     <input type="text" placeholder="Enter code" name="cod_estu"  value="{{COD_ESTU}}" id="cod_estu" required readonly>
+    </div>
 
+    <div>
     <label for="cod_nac"><b>Nacionalidad</b></label>
     <input type="text" placeholder="Enter Phone Number" name="cod_nac" value="{{COD_NAC}}"  id="cod_nac" required >
-
+    </div>
+    
+    <div>
     <label for="apellido_estu"><b>Apellidos</b></label>
     <input type="text" placeholder="Enter Email Id" name="apellido_estu" value="{{APELLIDO_ESTU}}"  id="apellido_estu" required >
-
+    </div>
+    
+    <div>
     <label for="nombre_estu"><b>Nombres</b></label>
     <input type="text" placeholder="Enter name Id" name="nombre_estu" value="{{NOMBRE_ESTU}}" id="nombre_estu" required >
-    
+    </div>
+
+    <div>
       <label for="telefono_estu"><b>Teléfono</b></label>
     <input type="text" placeholder="Enter phone" name="telefono_estu" value="{{TELEFONO_ESTU}}" id="telefono_estu" required  >
-    
+    </div>
+
+    <div>
     <label for="correo_estu"><b>Correo</b></label>
     <input type="text" placeholder="Enter phone" name="correo_estu" value="{{CORREO_ESTU}}" id="correo_estu" required  >
-     
+     </div>
+
+     <div>
      <label for="fecha_nac_estu"><b>Nacimiento</b></label>
     <input type="text" placeholder="Enter fecha" name="fecha_nac_estu" value="{{FECHA_NAC_ESTU}}" id="fecha_nac_estu" required >
-     
+     </div>
+
+     <div>
      <label for="ident_estu"><b>Identificación</b></label>
     <input type="text" placeholder="Enter ident" name="ident_estu" value="{{IDENT_ESTU}}"  id="ident_estu" required >
+     </div>
 
+     <div>
     <label for="direccion_estu"><b>Dirección</b></label>
     <input type="text" placeholder="Enter adreess" name="direccion_estu" value="{{DIRECCION_ESTU}}"  id="direccion_estu" required  >
-    
+    </div> 
 
 
-    <button type="submit" class="registerbtn">UPDATE STUDENT</button>
+    <button type="submit" class="registerbtn">ACTUALIZAR</button>
 {{/data}}
   
-    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
      
     
 </form>
 </div>
      
-      {{/if}}      
+      {{/if}}   
+
+      <footer>
+
+              <div class="textos-footer">
+              <h1>Grupo 3</h1>
+              <h5>Proyecto BD 5C</h5>
+              </div>
+
+              <div class="integrantes">
+                  <h3>Janeth Caiza</h3>
+                  <h3>Sebastián Gancino</h3>
+                  <h3>Oliver Guamán</h3>
+                  <h3>Sebastián Mafla</h3>
+              </div>
+
+              <div class="licen">
+              <h4>Msc. Yolanda Borja</h4>
+            </div>
+           </footer>   
 </body>
 </html>

@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+/*Implementación SecondProyect*/
+
+
+.menu {
+  
+  background-color: rgba(12, 22, 51, 1);
+  padding: 0 1.3rem 1rem;
+  position: fixed;
+  top: 0;
+  width: 97%;
+  text-align: center;
+}
+
+.menu a {
+    font-size: 1rem;
+    font-weight: bolder;
+    color: wheat;
+    text-decoration: none;
+    padding: 0 2rem;
+}
+
+/*Second App CSS*/
+
+.container-logo {
+    text-align: center;
+  }
+  
+  
+  .container-logo img {
+    padding-top: 0.5rem;
+    width: 6rem;
+    height: 6rem;
+    
+  }
+  
+  .container-nav {
+    display: block;
+    width: 100%;
+    height: 46px;
+    text-align: center;
+    padding-top: 1rem;
+    
+  }
+  
+  .li-container {
+    display: inline-block;
+    margin-right: 0;
+    height: 3rem;
+    
+  }
+  
+  .li-container a {
+    color: whitesmoke;
+    font-weight: 700;
+    font-size: 95%;
+    letter-spacing: 0.01em;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-family: 'Silkscreen', cursive;
+  
+  }
+  
+    .li-container a:hover {
+      color: yellow;
+  }
+  .icono-user img {
+    width: 3rem;
+    height: 3rem;
+    text-align: left;
+  }
+  
+  .icono-user {
+    text-align: end;
+    padding-right: 3rem;
+  }
+   
+  
+  
+  
+  
+  
+  /*Form*/
+  
+  .createUserContainer {
+      width: 40%;
+  /*     height: 50vh;
+   */   
+      background:rgba(3, 9, 30, 1);
+      border-radius: 1rem;
+      color: #ccc;
+      display: block;
+      text-align: center;
+  /*     margin-top: 25vh;
+   */    
+        
+    }
+    
+    .createUserContainer input, button{
+    border-radius: 1rem;
+    }
+    
+    
+     /* Bordered form */
+     
+    
+    /* Full-width inputs */
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    
+    /* Set a style for all buttons */
+    button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    /* Add a hover effect for buttons */
+    button:hover {
+      opacity: 0.8;
+    }
+    
+    /* Extra style for the cancel button (red) */
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+    
+    /* Center the avatar image inside this container */
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+    }
+    
+    
+    
+    /* Avatar image */
+    
+    .avatar  {
+      text-align: center;
+    }
+    img.avatar {
+      width: 13%;
+      border-radius: 50%;
+    }
+    
+    /* Add padding to containers */
+    .container {
+      padding: 16px;
+    }
+    
+    /* The "Forgot password" text */
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+    
+  
+  
+  /*-------------------------
+  INFo*/
+  .info-container {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 60)),
+      url(../assets/img/banner\ pixel.jpeg);
+    background-position: center;
+    background-size: cover;
+     height: 80vh;
+    padding-top: 5rem;
+  
+  }
+
+  .info-container h1 {
+    font-size: 2.5rem;
+    color: lemonchiffon;
+    text-align: center;
+    padding: 20px;
+    color: rgba(8, 96, 168, 1);
+    font-family: 'Silkscreen', cursive;
+  
+  }
+  
+  
+  .info-container .uce {
+    color: red;
+  }
+  
+  .tarjeta {
+    display: flex;
+    border-radius: 1rem;
+    align-items: center;
+    background: rgba(3, 9, 30, 1);
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 5px 2px 14px -3px rgb(0 0 0);
+
+  }
+  
+  .tarjeta img {
+    padding: 20px;
+  }
+  
+  .tarjeta p {
+    color: aliceblue;
+    padding: 3rem;
+  }
+   .tarjeta .tech {
+    color: red;
+    font-weight: bold;
+   }
+  
+  
+  
+   .info-container2 {
+    text-align: center;
+    padding: 4rem 0;
+  }
+  
+  
+  
+  .info-container2 h1 {
+    font-size: 2.5rem 0
+    ;
+    color: lemonchiffon;
+    text-align: center;
+    padding: 4rem 0;
+    color: rgba(8, 96, 168, 1);
+    font-family: 'Silkscreen', cursive;
+  
+  }
+  
+  
+  .info-container .uce {
+    color: red;
+  }
+  
+   
+   .tarjeta2 {
+    display: flex;
+    border-radius: 1rem;
+    align-items: center;
+    background: rgba(3, 9, 30, 1);
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 5px 2px 14px -3px rgb(0 0 0);
+
+  }
+  
+   .tarjeta2 img {
+    padding: 20px;
+  }
+  
+  .tarjeta2 p {
+    color: aliceblue;
+    padding: 3rem;
+  }
+   .tarjeta2 .tech {
+    color: red;
+    font-weight: bold;
+   }
+  
+      
+   .info-container3 {
+    background: #03091e;
+  }
+  
+  .tarjeta3 {
+    display: block;
+    border-radius: 1rem;
+    align-items: center;
+    background: rgba(8, 96, 168, 1);
+    width: 80%;
+    margin: 0 auto;
+   }
+  
+   .tarjeta3 img {
+    padding: 20px;
+  }
+  
+  .tarjeta3 p {
+    color: aliceblue;
+    padding: 3rem;
+  }
+   .tarjeta3 .tech {
+    color: #03091e;
+    font-weight: bold;
+   }
+  
+  
+   .info-container3 {
+    text-align: center;
+    padding: 4rem 0;
+  }
+  
+  
+  
+  .info-container3 h1 {
+    font-size: 2.5rem 0
+    ;
+    color: lemonchiffon;
+    text-align: center;
+    padding: 4rem 0;
+    color: rgba(8, 96, 168, 1);
+    font-family: 'Silkscreen', cursive;
+  
+  }
+  
+  
+  /*TECH*/
+  .logos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    grid-gap: 3rem 0;
+  }
+   
+  .tech-container  h1{
+    font-size: 2.5rem 0
+    ;
+    color: lemonchiffon;
+    text-align: center;
+    padding: 4rem 0;
+    color: rgba(8, 96, 168, 1);
+    font-family: 'Silkscreen', cursive;
+  
+  }
+  
+  .tech-container {
+    background: #f5f5f5;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    box-shadow: 5px 2px 14px -3px rgb(0 0 0);
+  }
+  
+  
+  
+  /*Footer*/
+  footer {
+    height: 160px;
+    text-align: center;
+    background: #03091e;
+    margin-top: 4rem;
+  }
+  
+  .textos-footer h1{
+    color: lemonchiffon;
+    font-family: 'Silkscreen', cursive;
+  }
+  
+  .textos-footer h5{
+    color: lemonchiffon;}
+  
+  
+  
+    .integrantes {
+      display: flex;
+      justify-content: center;
+  }
+  
+  .integrantes h3 {
+    padding: 2rem;
+    color: #0860a8;
+  }
+  
+  .licen {
+    background: #0860a8;
+    height: 2rem;
+  }
+  .licen h4 {
+    color:yellow;
+  }
+  
+  
+  
+  
+  
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+        display: block;
+        float: none;
+      }
+      .cancelbtn {
+        width: 100%;
+      }
+    } 
+    
+    
+    
+    
+    
+    
+  
+  
