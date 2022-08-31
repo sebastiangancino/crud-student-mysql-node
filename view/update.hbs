@@ -9,13 +9,14 @@
 </head>
 <body>
     <div class="">
-      <form action="/updatesearch">
-   <h3>Update  STUDENT</h3>
+
+  <form action="/updatesearch">
+   <h3>SEARCH STUDENT</h3>
    
     <hr>
  
-    <label for="phn"><b>Phone no</b></label>
-    <input type="phone" style="width:200px;" placeholder="type phone no to be searched" name="phone" id="phone" required>
+    <label for="cod_estu"><b>Code no</b></label>
+    <input type="text" style="width:200px;" placeholder="type text to be searched" name="cod_estu" id="cod_estu" required>
 
     <button type="submit" class="registerbtn">SEACRH STUDENT</button>
     <a href="./" style="color:black">BACK TO HOME PAGE</a>
@@ -42,20 +43,36 @@
    
     <hr>
 {{#data}}
-    <label for="name"><b>Student name</b></label>
-    <input type="text" placeholder="Enter Name" name="name" value="{{username}}" id="name" required>
 
-    <label for="phn"><b>Phone no</b></label>
-    <input type="phone" placeholder="Enter Phone Number" name="phone" value="{{phoneno}}" id="phone" required readonly>
+     <label for="cod_estu"><b>Código</b></label>
+    <input type="text" placeholder="Enter code" name="cod_estu"  value="{{COD_ESTU}}" id="cod_estu" required readonly>
 
-    <label for="eml-id"><b>Email Id</b></label>
-    <input type="email" placeholder="Enter Email Id" name="email" value="{{emailid}}" id="email" required readonly>
-   
-  <div class="gender_g">
-     <strong>Gender</strong>
-     <input type="radio" name="gender" id="" value="Male"> Male
-     <input type="radio" name="gender" id=""  value="Female">  Female
-  </div>
+    <label for="cod_nac"><b>Nacionalidad</b></label>
+    <input type="text" placeholder="Enter Phone Number" name="cod_nac" value="{{COD_NAC}}"  id="cod_nac" required >
+
+    <label for="apellido_estu"><b>Apellidos</b></label>
+    <input type="text" placeholder="Enter Email Id" name="apellido_estu" value="{{APELLIDO_ESTU}}"  id="apellido_estu" required >
+
+    <label for="nombre_estu"><b>Nombres</b></label>
+    <input type="text" placeholder="Enter name Id" name="nombre_estu" value="{{NOMBRE_ESTU}}" id="nombre_estu" required >
+    
+      <label for="telefono_estu"><b>Teléfono</b></label>
+    <input type="text" placeholder="Enter phone" name="telefono_estu" value="{{TELEFONO_ESTU}}" id="telefono_estu" required  >
+    
+    <label for="correo_estu"><b>Correo</b></label>
+    <input type="text" placeholder="Enter phone" name="correo_estu" value="{{CORREO_ESTU}}" id="correo_estu" required  >
+     
+     <label for="fecha_nac_estu"><b>Nacimiento</b></label>
+    <input type="text" placeholder="Enter fecha" name="fecha_nac_estu" value="{{FECHA_NAC_ESTU}}" id="fecha_nac_estu" required >
+     
+     <label for="ident_estu"><b>Identificación</b></label>
+    <input type="text" placeholder="Enter ident" name="ident_estu" value="{{IDENT_ESTU}}"  id="ident_estu" required >
+
+    <label for="direccion_estu"><b>Dirección</b></label>
+    <input type="text" placeholder="Enter adreess" name="direccion_estu" value="{{DIRECCION_ESTU}}"  id="direccion_estu" required  >
+    
+
+
     <button type="submit" class="registerbtn">UPDATE STUDENT</button>
 {{/data}}
   

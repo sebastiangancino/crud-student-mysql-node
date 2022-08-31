@@ -5,7 +5,7 @@ const con = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "password",
-    database: "youtube",
+    database: "Matriculas_UCE_",
     port:3306,
     socketPath: '/var/run/mysqld/mysqld.sock'
 });

@@ -34,7 +34,7 @@ app.get("/delete", (req, res) => {
 });
 
 app.get("/view", (req, res) => {
-  let qry = "select * from test ";
+  let qry = "select * from ESTUDIANTE ";
     mysql.query(qry, (err, results) => {
         if (err) throw err
         else {
@@ -45,19 +45,19 @@ app.get("/view", (req, res) => {
 
 app.get("/addstudent", (req, res) => {
   //fetching data from form
-  const { name, phone, email, gender } = req.query;
+  const { cod_estu, cod_nac, apellido_estu, nombre_estu, telefono_estu, correo_estu, fecha_nac_estu, ident_estu, direccion_estu } = req.query;
 
   //Snitization XSS..
-  let qry = "select * from test  where emailid=? or phoneno=?";
-  mysql.query(qry, [email, phone], (err, results) => {
+  let qry = "select * from ESTUDIANTE  where cod_estu=?";
+  mysql.query(qry, [cod_estu], (err, results) => {
     if (err) throw err;
     else {
       if (results.length > 0) {
         res.render("add", { checkmesg: true });
       } else {
         //insert query
-        let qry2 = "insert into test values (?,?,?,?)";
-        mysql.query(qry2, [name, phone, email, gender], (err, results) => {
+        let qry2 = "insert into ESTUDIANTE values (?,?,?,?,?,?,?,?,?)";
+        mysql.query(qry2, [cod_estu, cod_nac, apellido_estu, nombre_estu, telefono_estu, correo_estu, fecha_nac_estu, ident_estu, direccion_estu], (err, results) => {
           if (results.affectedRows > 0) {
             res.render("add", { mesg: true });
           }
@@ -69,10 +69,10 @@ app.get("/addstudent", (req, res) => {
 
 app.get("/searchstudent", (req, res) => {
   //fetch data from the form
-  const { phone } = req.query;
-  let qry = "select *from  test where phoneno=?";
+  const { cod_estu } = req.query;
+  let qry = "select * from ESTUDIANTE where cod_estu=?";
 
-  mysql.query(qry, [phone], (err, results) => {
+  mysql.query(qry, [cod_estu], (err, results) => {
     if (err) throw err;
     else {
       if (results.length > 0) {
@@ -85,11 +85,11 @@ app.get("/searchstudent", (req, res) => {
 });
 
 app.get("/updatesearch", (req, res) => {
-  const { phone } = req.query;
+  const {cod_estu} = req.query;
 
-  let qry = "select * from test where phoneno=?";
-  mysql.query(qry, [phone], (err, results) => {
-    if (err) throw err;
+  let qry = "select * from ESTUDIANTE where COD_ESTU=?";
+  mysql.query(qry, [cod_estu], (err, results) => {
+    if (err) throw err
     else {
       if (results.length > 0) {
         res.render("update", { mesg1: true, mesg2: false, data: results });
@@ -98,32 +98,35 @@ app.get("/updatesearch", (req, res) => {
       }
     }
   });
-});
+})
+
 app.get("/updatestudent", (req, res) => {
   // fetch data
 
-  const { phone, name, gender } = req.query;
-  let qry = "update test set username=?, gender=? where phoneno=?";
+  const {cod_estu ,cod_nac, apellido_estu, nombre_estu, telefono_estu, correo_estu, fecha_nac_estu, ident_estu, direccion_estu} = req.query;
+  let qry = "update ESTUDIANTE set cod_nac=?, apellido_estu=?, nombre_estu=?, telefono_estu=?, correo_estu=?, fecha_nac_estu=?, ident_estu=?, direccion_estu=? where cod_estu=?";
 
-  mysql.query(qry, [name, gender, phone], (err, results) => {
-    if (err) throw err;
+  mysql.query(qry, [cod_nac, apellido_estu, nombre_estu, telefono_estu, correo_estu, fecha_nac_estu, ident_estu, direccion_estu, cod_estu], (err, results) => {
+    if (err) throw err
     else {
       if (results.affectedRows > 0) {
         res.render("update", { umesg: true });
       }
     }
-  });
+  })
 });
+
+
 
 app.get("/removestudent", (req, res) => {
 
   // fetch data from the form
 
 
-  const { phone } = req.query;
+  const { cod_estu } = req.query;
 
-  let qry = "delete from test where phoneno=?";
-  mysql.query(qry, [phone], (err, results) => {
+  let qry = "delete from ESTUDIANTE where cod_estu=?";
+  mysql.query(qry, [cod_estu], (err, results) => {
       if (err) throw err
       else {
           if (results.affectedRows > 0) {
