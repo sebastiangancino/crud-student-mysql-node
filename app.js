@@ -43,7 +43,7 @@ app.get("/delete", (req, res) => {
 });
 
 app.get("/view", (req, res) => {
-  let qry = "select * from ESTUDIANTE ";
+  let qry = "select * from ESTUDIANTE";
     mysql.query(qry, (err, results) => {
         if (err) throw err
         else {
@@ -51,6 +51,8 @@ app.get("/view", (req, res) => {
         }
 });
 });
+
+
 
 app.get("/addstudent", (req, res) => {
   //fetching data from form
@@ -86,12 +88,20 @@ app.get("/searchstudent", (req, res) => {
     else {
       if (results.length > 0) {
         res.render("search", { mesg1: true, mesg2: false });
+        
       } else {
         res.render("search", { mesg1: false, mesg2: true });
       }
     }
   });
 });
+
+app.get("/showuser", (req, res) => {
+   const {cod_estu} = req.query;
+   let qry = "select * from ESTUDIANTE where cod_estu=?";
+
+   
+  });
 
 app.get("/updatesearch", (req, res) => {
   const {cod_estu} = req.query;

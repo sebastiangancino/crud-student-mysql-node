@@ -92,16 +92,22 @@
   
 
      
-    {{#if mesg}}
-     <h3>Data Inserted</h3>
+ 
+</form>
 
+   {{#if mesg}}
+     <div class="matricula-container">
+     <h3>Matrícula exitosa</h3>
+      <div img-container>
+        <img src="cuaderno.png" alt="">
+      </div>
+      </div>
      
      {{/if}}
      
       {{#if checkmesg}}
-     <h3>Emailid or Phoneno already present!</h3>
+     <h3>El estudiante ya está registrado</h3>
      {{/if}} 
-</form>
 </div>
 </div>
 
